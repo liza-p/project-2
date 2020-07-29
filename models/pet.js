@@ -1,6 +1,6 @@
 // Creating our User model
 module.exports = function(sequelize, DataTypes) {
-    var User = sequelize.define("Pet", {
+    var Pet = sequelize.define("Pet", {
       // The name cannot be null, varchar 255
       name: {
         type: DataTypes.STRING,
@@ -27,6 +27,6 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.STRING(1000)
       }
     });
-  
+    return Pet;
   };
   
