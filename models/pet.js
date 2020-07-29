@@ -27,6 +27,18 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.STRING(1000)
       }
     });
+    Pet.associate = function (models) {
+      // We're saying that a Pet should belong to an User
+      // A Pet can't be created without an User due to the foreign key constraint
+      Pet.belongsTo(models.User, {
+          foreignKey: {
+              allowNull: false
+          }
+      });
+      Pet.hasMany(models.Post, {
+        onDelete: "cascade"
+      });
+  };
     return Pet;
   };
   

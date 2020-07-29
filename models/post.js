@@ -19,10 +19,19 @@ module.exports = function(sequelize, DataTypes) {
       img_url:{
           type: DataTypes.STRING(1000),
           allowNull: false   
-      },
-      pet_id: {
-          type: DataTypes.INTEGER
       }
+      // pet_id: {
+      //     type: DataTypes.INTEGER
+      // }
     });
+    Post.associate = function (models) {
+      // We're saying that a Post should belong to an Pet
+      // A Post can't be created without Pet due to the foreign key constraint
+      Post.belongsTo(models.Pet, {
+          foreignKey: {
+              allowNull: false
+          }
+      });
+  };
     return Post;
   };
