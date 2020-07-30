@@ -1,0 +1,34 @@
+
+
+body,html{
+    height: 100%;
+    
+    }
+    
+    
+    .background-image{
+        /* margin: 0;
+        padding: 0; */
+        /* background: url("https://images.kienthuc.net.vn/zoom/800/uploaded/nguyenlap/2016_01_18/khi-loai-cho-dang-yeu-cung-lang-man-nhu-nguoi-hinh-2.jpg") no-repeat center center fixed;  */
+        background-size: cover;   
+        position: relative;
+        top: 5px;
+    }
+    /* .navbar-text{
+        text-align: center;
+    } */
+    .loginBox{
+        position: absolute;
+        top: 55%;
+        left: 25%;
+        transform: translate(-50%,-50%);
+        width: 350px;
+        height: 350px;
+        box-sizing: border-box;
+        background: rgba(0,0,0,.5);
+    }
+h4{
+position: left;
+margin-left: 5px;
+
+}
