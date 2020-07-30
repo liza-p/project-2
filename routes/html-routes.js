@@ -23,7 +23,11 @@ module.exports = function(app) {
   });
 
 
-//   app.get("/create-pet")
+  app.get("/create-pet",isAuthenticated, function(req, res){
+    res.render("createpet", {
+      user: req.user
+    });
+  });
 
 //   app.get("/create-post")
 //   app.get("/post/id/:id")
