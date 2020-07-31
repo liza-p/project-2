@@ -4,7 +4,7 @@ body,html{
     height: 100%;
     
     }
-    
+   
     
     .background-image{
         /* margin: 0;
@@ -19,7 +19,7 @@ body,html{
     } */
     .loginBox{
         position: absolute;
-        top: 55%;
+        top: 45%;
         left: 25%;
         transform: translate(-50%,-50%);
         width: 350px;
@@ -27,8 +27,40 @@ body,html{
         box-sizing: border-box;
         background: rgba(0,0,0,.5);
     }
-h4{
+    .background-img{
+        background-size: cover;
+        position: relative;
+       
+    }
+/* h4{
 position: left;
 margin-left: 5px;
 
+} */
+.container{
+    margin-top: 8%;
+    margin-left: 8%;
 }
+.card:hover{
+-webkit-boc-shadow: -1px 9px 40px -12px rgba(247, 212, 15, 0.75);
+-moz-box-shadow: -1px 9px 40px -12px rgba(247, 212, 15, 0.75);
+box-shadow: -1px 9px 40px -12px rgba(247, 212, 15, 0.75);
+}
+.card-body{
+    position: relative;
+    transform: translate(0%,0%);
+    background: rgba(228, 129, 17, 0.5);
+
+}
+.navbar{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    list-style: none;
+    /* background-color:black;
+    border-bottom: 10px solid black;
+    border-top: 1px solid black;  */
+    margin-left: 0px;
+
+} 
