@@ -37,7 +37,7 @@ module.exports = function(app) {
             user: req.user
         });
     });
-
+    //added this route. 
     app.get("/create-post", isAuthenticated, function(req, res) {
         res.render("createpost", {
             user: req.user

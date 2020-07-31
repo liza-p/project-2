@@ -18,3 +18,5 @@ $('#btnGen').click(function() {
     addCols($('#numPanels').val());
     return false;
 });
+
+// another function get all the dogs from the date base maybe save it as a object and pass it to a function that popilate to the column.

@@ -1,3 +1,13 @@
+// var express = require("express")
+// var app = express()
+// var passport = require("../config/passport");
+
+// module.exports = function(app) {
+
+// app.post()
+
+
+
 // // Requiring our models and passport as we've configured it
 // var db = require("../models");
 // var passport = require("../config/passport");
