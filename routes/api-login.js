@@ -32,22 +32,5 @@ module.exports = function(app) {
             });
         }
     });
-    app.get("/", isAuthenticated, function(req, res) {
-        res.render("index", {
-            user: req.user
-        });
-    });
-    //added this route. 
-    app.get("/create-post", isAuthenticated, function(req, res) {
-        res.render("createpost", {
-            user: req.user
-        })
-    })
-
-    app.post("/create-post"), isAuthenticated,
-        function(req, res) {
-            res.render("createpost", {
-                user: req.user
-            })
-        }
+   
 };
