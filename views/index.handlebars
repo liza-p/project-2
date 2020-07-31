@@ -1,47 +1,19 @@
-<<<<<<< HEAD:views/index.handlebars
-<!doctype html>
-<html lang="en">
-
+{{!-- wraping create pet form into nav card --}}
+{{#> navigationCard }}
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="style/style.css" rel="stylesheet" type="text/css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <title>Happy paw</title>
-        <nav class="navbar navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-     </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">Happy PAW</a>
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-               <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-             </li>
-     <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-           
-           
-        </nav>
+       
         <body class= "background-img" background="../images/missionhills.jpg" >
     </head>
 <body>
     
  
-=======
-{{!-- wraping main page into nav card --}}
-{{#> navigationCard }}
-    <h1>Paw's post </h1>
->>>>>>> master:views/index.html
     <div class="row">
         <div class="col">
             <div class="card-transparent" style="width: 20rem;">
@@ -114,7 +86,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD:views/index.handlebars
     <script>
         $(document).ready(function(){
             $(".col").hover(
@@ -145,7 +116,4 @@
 
 </html>
 {{!-- https://code.jquery.com/jquery-3.5.1.slim.min.js --}}
-=======
-   
-    {{/ navigationCard}}
->>>>>>> master:views/index.html
+{{/ navigationCard}}
