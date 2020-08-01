@@ -6,10 +6,8 @@ module.exports = function(app) {
         console.log(req.user);
         db.Pet.create({
             name: req.body.name,
-            gender: req.body.gender,
-            breed: req.body.breed,
-            age: req.body.age,
-            notes: req.body.notes,
+            pet: req.body.pet,
+            addDescription: req.body.addDescription,
             img_url: req.body.image,
             UserId: req.user.id,
 
@@ -23,5 +21,11 @@ module.exports = function(app) {
                 res.status(401).json(err);
             });
     });
+    app.post("/create-post"), isAuthenticated,
+        function(req, res) {
+            res.render("createpost", {
+                user: req.user
+            })
+        }
 
 };

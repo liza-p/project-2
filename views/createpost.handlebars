@@ -1,11 +1,67 @@
-<div class="container">
-    <h2>Add some cards..</h2>
-    <form class="form-inline">
-    <input class="form-control col-1" type="text" id="numPanels" value="17" maxlength="3" />
-    <button type="button" class="btn btn-info" id="btnGen">Generate</button>
-    </form>
-    <br>
-    <div class="row" id="contentPanel">
+{{!-- wraping create pet form into nav card --}}
+{{#> navigationCard }}
 
+    <div class ="container">
+<form class="needs-validation" id="addPetPost" novalidate>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01">Title</label>
+      <input type="text" class="form-control" id="title" placeholder="Insert title" required>
+      <div class="valid-feedback">
+        You've created
+      </div>
     </div>
+    {{!-- dog selection  --}}
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom04">Pet</label>
+      <select class="custom-select" id="pet" required>
+        <option selected disabled value="">Choose...</option>
+        <option value="german shepherd">German Shepherd</option>
+        <option value="Bulldog">Bulldog</option>
+        <option value="Chihuahua">Chihuahua</option>
+        <option value="Golden Retriever">Golden Retriever</option>
+         <option value="Husky">Husky</option>
+         <option value="French Bulldog">French Bulldog</option>
+         <option value="Pomeranian">Pomeranian</option>
+          <option value="Maltese">Maltese</option>
+          <option value="Spaniel">Spaniel</option>
+          <option value="Shiba Inu">Shiba Inu</option>
+           <option value="Chow Chow">Chow Chow</option>
+           <option value="Samoyed">Samoyed</option>
+           <option value="Dalmatian">Dalmatian</option>
+           <option value="Bull Terrier">Bull Terrier</option>
+           <option value="Pit Bull">Pit Bull</option>
+            <option value="Shar Pei">Shar Pei</option>
+            <option value="corgi">Corgi</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid Breed.
+      </div>
+    </div>
+  </div>
+  {{!-- Add Description --}}
+  <div class="form-row">
+      <div class="col-md-12 mb-3">
+    <label for="notes">Add Description</label>
+    <textarea class="form-control" id="addDescription" rows="3"></textarea>
+  </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-3 mb-3">
+    <button class="btn btn-secondary" id="upload">Upload a Picture</button>
+  </div>
+  </div>
+  
+
+  <button class="btn btn-primary" type="submit">Create Post</button>
+
+   
 </div>
+
+
+
+
+{{/ navigationCard}}
+{{!-- filestack link for img uploading --}}
+<script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+<script type="text/javascript" src="/js/createpet.js"></script>
