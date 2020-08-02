@@ -11,17 +11,17 @@ module.exports = function(app) {
             age: req.body.age,
             notes: req.body.notes,
             img_url: req.body.image,
-            UserId: req.user.id,
-
+            UserId: req.user.id
         })
-
         .then(function() {
-                res.status(200).json({});
-            })
-            .catch(function(err) {
-                console.error(err);
-                res.status(401).json(err);
-            });
+            res.status(200).json({});
+        })
+        .catch(function(err) {
+            console.error(err);
+            res.status(401).json(err);
+        });
     });
-
+    app.post("/api/create-post", isAuthenticated, function(req, res) {
+        // TODO: insert the post into database
+    });
 };
