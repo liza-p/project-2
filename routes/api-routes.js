@@ -3,7 +3,6 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
     //function to capture the user input data  and insert into a db tabel
     app.post("/api/create-pet", isAuthenticated, function(req, res) {
-        console.log(req.user);
         db.Pet.create({
             name: req.body.name,
             gender: req.body.gender,
@@ -22,6 +21,18 @@ module.exports = function(app) {
         });
     });
     app.post("/api/create-post", isAuthenticated, function(req, res) {
-        // TODO: insert the post into database
+        db.Post.create({
+            title: req.body.title,
+            description: req.body.description,
+            likes: 0,
+            img_url: req.body.image,
+            PetId: req.body.pet
+        })
+        .then(function(){
+            res.status(200).json({});
+        })
+        .catch(function(err){
+            res.status(401).json(err);
+        });
     });
 };
