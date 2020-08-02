@@ -1,76 +1,20 @@
 {{#> navigationCard }}
 <body class= "background-img" background="../images/missionhills.jpg" >
     <div class="row">
-        <div class="col">
-            <div class="card-transparent" style="width: 20rem;">
-                <img src="https://i.cbc.ca/1.4776659.1533669783!/fileImage/httpImage/emily-pinckard.jpg" 
-                class="card-img-top" alt="card one">
-                <div class="card-body">
-                    <h4 class="card-title">Going to the Dolores park with Charlie</h4>
-                    <p class="card-text">Anyone wanna join us?</p>
-                    <input type="comment" class="form-control" id="inputComment" placeholder="add comment">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+        {{!-- handlebar to rended posts data on the main page --}}
+        {{#each posts}}
+            <div class="col-4">
+                <div class="card-transparent" style="width: 20rem;">
+                    <img src={{img_url}} class="card-img-top" alt="card one">
+                    <div class="card-body">
+                        <h4 class="card-title">{{title}}</h4>
+                        <p class="card-text">{{description}}</p>
+                        <input type="comment" class="form-control" id="inputComment" placeholder="add comment">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card-transparent"style="width: 20rem;">
-                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2019%2F05%2Fkyle-rohrig-blind-dog-katana-BLINDHIKE0519.jpg" class="card-img-top" alt="card two">
-                <div class="card-body">
-                    <h4 class="card-title">Me and Max are hitting the trails today</h4>
-                    <p class="card-text">Someone wanna get some sun?</p>
-                    <input type="comment" class="form-control" id="inputComment" placeholder="add comment">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card-transparent" style="width: 20rem;">
-                <img src="https://www.travelnuity.com/wp-content/uploads/2018/03/Baker-Beach-1080x720.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title">On Baker Beach with our guys .</h4>
-                    <p class="card-text">Does you pet love water too?</p>
-                    <input type="comment" class="form-control" id="inputComment" placeholder="add comment">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <div class="card-transparent" style="width: 20rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Going to the park today</h5>
-                    <p class="card-text">My dog and i are going to Dolores park today.</p>
-                    <input type="comment" class="form-control" id="inputComment" placeholder="add comment">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card-transparent" style="width: 20rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Going to the park today</h5>
-                    <p class="card-text">My dog and i are going to Dolores park today.</p>
-                    <input type="comment" class="form-control" id="inputComment" placeholder="add comment">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card-transparent" style="width: 20rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Going to the park today</h5>
-                    <p class="card-text">My dog and i are going to Dolores park today.</p>
-                    <input type="comment" class="form-control" id="inputComment" placeholder="add comment">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
     {{!-- placeholder div to provide scrolling space for the create post button --}}
     <div class="py-4"></div>

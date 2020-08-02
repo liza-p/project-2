@@ -16,26 +16,14 @@
       <label for="validationCustom04">Pet</label>
       <select class="custom-select" id="pet" required>
         <option selected disabled value="">Choose...</option>
-        <option value="german shepherd">German Shepherd</option>
-        <option value="Bulldog">Bulldog</option>
-        <option value="Chihuahua">Chihuahua</option>
-        <option value="Golden Retriever">Golden Retriever</option>
-         <option value="Husky">Husky</option>
-         <option value="French Bulldog">French Bulldog</option>
-         <option value="Pomeranian">Pomeranian</option>
-          <option value="Maltese">Maltese</option>
-          <option value="Spaniel">Spaniel</option>
-          <option value="Shiba Inu">Shiba Inu</option>
-           <option value="Chow Chow">Chow Chow</option>
-           <option value="Samoyed">Samoyed</option>
-           <option value="Dalmatian">Dalmatian</option>
-           <option value="Bull Terrier">Bull Terrier</option>
-           <option value="Pit Bull">Pit Bull</option>
-            <option value="Shar Pei">Shar Pei</option>
-            <option value="corgi">Corgi</option>
+
+        {{!-- handlebars loop that will render pets from html-routes file /create-post route --}}
+        {{#each pets}}
+          <option value={{id}}>{{name}}</option>
+        {{/each}}
       </select>
       <div class="invalid-feedback">
-        Please select a valid Breed.
+    
       </div>
     </div>
   </div>
@@ -43,7 +31,7 @@
   <div class="form-row">
       <div class="col-md-12 mb-3">
     <label for="notes">Add Description</label>
-    <textarea class="form-control" id="addDescription" rows="3"></textarea>
+    <textarea class="form-control" id="description" rows="3"></textarea>
   </div>
   </div>
   <div class="form-row">
@@ -64,4 +52,4 @@
 {{/ navigationCard}}
 {{!-- filestack link for img uploading --}}
 <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
-<script type="text/javascript" src="/js/createpet.js"></script>
+<script type="text/javascript" src="/js/createpost.js"></script>
