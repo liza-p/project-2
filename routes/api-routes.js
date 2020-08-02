@@ -6,26 +6,22 @@ module.exports = function(app) {
         console.log(req.user);
         db.Pet.create({
             name: req.body.name,
-            pet: req.body.pet,
-            addDescription: req.body.addDescription,
+            gender: req.body.gender,
+            breed: req.body.breed,
+            age: req.body.age,
+            notes: req.body.notes,
             img_url: req.body.image,
-            UserId: req.user.id,
-
+            UserId: req.user.id
         })
-
         .then(function() {
-                res.status(200).json({});
-            })
-            .catch(function(err) {
-                console.error(err);
-                res.status(401).json(err);
-            });
+            res.status(200).json({});
+        })
+        .catch(function(err) {
+            console.error(err);
+            res.status(401).json(err);
+        });
     });
-    app.post("/create-post"), isAuthenticated,
-        function(req, res) {
-            res.render("createpost", {
-                user: req.user
-            })
-        }
-
+    app.post("/api/create-post", isAuthenticated, function(req, res) {
+        // TODO: insert the post into database
+    });
 };
