@@ -1,4 +1,4 @@
-// Creating our User model
+// Creating our Post model
 module.exports = function(sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
         // The name cannot be null, varchar 255
@@ -8,15 +8,15 @@ module.exports = function(sequelize, DataTypes) {
         },
         // The gender can not be null
         description: {
-            type: DataTypes.STRING(1000)
-        },
-
-        img_url: {
             type: DataTypes.STRING(1000),
             allowNull: false
         },
-        breed: {
-            type: DataTypes.STRING,
+        likes: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        img_url: {
+            type: DataTypes.STRING(1000),
             allowNull: false
         }
     });
