@@ -1,23 +1,5 @@
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-{{!-- wraping create pet form into nav card --}}
 {{#> navigationCard }}
-<head>
-    
-
-
- 
-    <title>Happy paw</title>
-
-        <body class= "background-img" background="../images/missionhills.jpg" >
-    </head>
-<body>
-    
- 
+<body class= "background-img" background="../images/missionhills.jpg" >
     <div class="row">
         <div class="col">
             <div class="card-transparent" style="width: 20rem;">
@@ -90,42 +72,39 @@
             </div>
         </div>
     </div>
-   
-    <a class="btn btn-small btn-info" href="/create-post">
-  <i class="fas fa-paw" style="font-size:20px"></i> Add Post</a>
-
-
-
-
-    <script>
-        $(document).ready(function(){
-            $(".col").hover(
-                function(){
-                    $(this).animate({
-                        marginTop: "-=1%",
-                    },200);
-
-                },
-            function(){
-                $(this).animate({
-                    marginTop:"0%"
-
-                },200);
-
-            }
-            );
-
-        });
-        </script>
-
-   
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    {{!-- placeholder div to provide scrolling space for the create post button --}}
+    <div class="py-4"></div>
 </body>
 
-</html>
 {{!-- https://code.jquery.com/jquery-3.5.1.slim.min.js --}}
-
 {{/ navigationCard}}
 
+<a class="btn btn-small btn-info create-post" href="/create-post">
+    <i class="fas fa-paw" style="font-size:20px"></i> Add Post
+</a>
+
+<script>
+    $(document).ready(function(){
+        $(".col").hover(
+            function(){
+                $(this).animate({
+                    marginTop: "-=1%",
+                },200);
+
+            },
+        function(){
+            $(this).animate({
+                marginTop:"0%"
+
+            },200);
+
+        }
+        );
+
+    });
+    </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
