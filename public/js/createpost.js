@@ -20,10 +20,9 @@ $(function() {
         event.preventDefault();
         //ajax request to the server to add form data to DB
         $.post("/api/create-post", {
-                //passing users data to the var 
-                name: $("#title").val().trim(),
+                title: $("#title").val().trim(),
                 pet: $("#pet").val(),
-                addDescription: $("#addDescription").val().trim(),
+                description: $("#description").val().trim(),
                 image: imgURL
             })
             .then(function(data) {
