@@ -21,8 +21,7 @@
 - Git - version control system to track changes to source code
 - GitHub - hosts repository
 - Heroku - to host the application and the database
-- Filestack - developer service for file uploading in the exploding realm of user-created content. 
-
+- Filestack - developer service for uploading images
 ## Contributors
 - [Alex Aguirrebena](https://github.com/Anotherarod)
 - [Isaias Del Mundo](https://github.com/idelmundo)

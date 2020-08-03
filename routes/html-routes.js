@@ -15,31 +15,30 @@ module.exports = function(app) {
     // Here we've add our isAuthenticated middleware to this route.
     // If a user who is not logged in tries to access this route they will be redirected to the signup page
     app.get("/", isAuthenticated, function(req, res) {
-        //fetching all Posts data joined with Pets foreing key
+        //fetching all Posts data joined with Pets foreign key
         db.Post.findAll({include:[db.Pet]})
-        .then(function(posts){
-            //getting only needed values using map method 
-            const filteredPosts = posts.map(function(post) {
-                console.log(post.dataValues.Pet);
-                //body of the map's callback function where we defining what data we want to get back
-                return {
-                    id: post.id,
-                    title: post.title,
-                    description: post.description,
-                    img_url: post.img_url,
-                    pet_img_url: post.Pet.img_url,
-                    pet_name: post.Pet.name,
-                    pet_breed: post.Pet.breed,
-                    pet_age: post.Pet.age,
-                };
+            .then(function(posts){
+                //selecting only needed values using map method 
+                const filteredPosts = posts.map(function(post) {
+                    console.log(post.dataValues.Pet);
+                    //body of the map's callback function where we defining what data we want to get back
+                    return {
+                        id: post.id,
+                        title: post.title,
+                        description: post.description,
+                        img_url: post.img_url,
+                        pet_img_url: post.Pet.img_url,
+                        pet_name: post.Pet.name,
+                        pet_breed: post.Pet.breed,
+                        pet_age: post.Pet.age,
+                    };
+                });
+                // passing data values to be rendered on the page 
+                res.render("index", {
+                    user: req.user,
+                    posts: filteredPosts
+                });
             });
-            // passing data values to be rendered on the page 
-            res.render("index", {
-                user: req.user,
-                posts: filteredPosts
-            });
-        })
-        
     });
     app.get("/create-pet", isAuthenticated, function(req, res) {
         res.render("createpet", {
