@@ -16,8 +16,12 @@ module.exports = function(app) {
     // If a user who is not logged in tries to access this route they will be redirected to the signup page
     app.get("/", isAuthenticated, function(req, res) {
         //fetching all Posts data joined with Pets foreign key
-        db.Post.findAll({include:[db.Pet]})
-            .then(function(posts){
+        db.Post.findAll({
+            include: [db.Pet],
+            order: [
+                ['createdAt', 'DESC'],
+            ],
+        }).then(function(posts){
                 //selecting only needed values using map method 
                 const filteredPosts = posts.map(function(post) {
                     console.log(post.dataValues.Pet);
