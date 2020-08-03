@@ -3,9 +3,9 @@
     <div class="row">
         {{!-- handlebar to rended posts data on the main page --}}
         {{#each posts}}
-            <div class="col-4">
+            <div class="col-4 post">
                 <div class="card-transparent" style="width: 20rem;">
-                    <img src={{pet_img_url}} class="pet-avatar mb-2"/>
+                    <img src={{pet_img_url}} class="pet-avatar m-2"/>
                     <span>{{pet_name}} ({{pet_breed}}, {{pet_age}})</span>
                     <img src={{img_url}} class="card-img-top" alt="card one">
                     <div class="card-body">
