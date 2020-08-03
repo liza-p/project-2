@@ -5,11 +5,13 @@
         {{#each posts}}
             <div class="col-4">
                 <div class="card-transparent" style="width: 20rem;">
+                    <img src={{pet_img_url}} class="pet-avatar mb-2"/>
+                    <span>{{pet_name}} ({{pet_breed}}, {{pet_age}})</span>
                     <img src={{img_url}} class="card-img-top" alt="card one">
                     <div class="card-body">
                         <h4 class="card-title">{{title}}</h4>
                         <p class="card-text">{{description}}</p>
-                        <input type="comment" class="form-control" id="inputComment" placeholder="add comment">
+                        <input type="comment" class="form-control mb-2" id="inputComment" placeholder="add comment">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
