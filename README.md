@@ -24,4 +24,4 @@
 ## Contributors
 - [Alex Aguirrebena](https://github.com/Anotherarod)
 - [Isaias Del Mundo](https://github.com/idelmundo)
-- [Liza Poliachenko}](https://github.com/liza-p)
+- [Liza Poliachenko](https://github.com/liza-p)
