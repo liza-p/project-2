@@ -4,7 +4,9 @@
 ## Link to the deployed application
 -   [Happy Paw](https://happypaw.herokuapp.com/)
 
-
+#### Log in credentials 
+- username: liza@gmail.com
+- password: password
 ## Technologies Used
 - JavaScript - Core logic
 - Node and NPM
