@@ -9,24 +9,12 @@
 ## Getting Started 
 You can easily clone our github repo on your local machince for development. 
 1. Open your terminal or gitbash if your are using a PC.
-2. Go to our github and click on code and copy "git@github.com:liza-p/project-2.git"
-3. Once you've done that open your terminal and type git clone git@github.com:liza-p/project-2.git
-4. This should start downloading and transfering it to your desktop.
-5. Open your editor and mysql workbench to get you started. enjoy!
+2. Clone the repo
+3. With in package.json run `npm install` command
 
 ## Why make it?
 Socializing your pets is extremely important. If you’ve ever owned a pet you know that it’s needed in the development of a pets personality and allows them to grow and be used to interacting with other animals. 
 We wanted to create an environment where users can meet other users with like interests and pets.
-
-## Code Highlights
-<p> Code snippet of Sequelize Join query</p> 
-<img src= "code.png" alt="code"> 
-
-<p> Code snippet of using Handlebars </p>
-<img src="code2.png" alt="code"> 
-
-<p> Code snippet of using Passport.js</p>
-<img src="code3.png" alt="code"> 
 
 ## Technologies Used
 - JavaScript - Core logic
