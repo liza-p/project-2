@@ -3,7 +3,7 @@
     <div class="row">
         {{!-- handlebar to rended posts data on the main page --}}
         {{#each posts}}
-            <div class="col-12 col-sm-6 col-lg-3 post">
+            <div class="col-12 col-sm-6 col-lg-3 post mb-3">
                 <div class="card-transparent" style="width: 20rem;">
                     <img src={{pet_img_url}} class="pet-avatar m-2"/>
                     <span>{{pet_name}} ({{pet_breed}}, {{pet_age}})</span>
@@ -25,8 +25,8 @@
 {{!-- https://code.jquery.com/jquery-3.5.1.slim.min.js --}}
 {{/ navigationCard}}
 
-<a class="btn btn-small btn-info create-post" href="/create-post">
-    <i class="fas fa-paw" style="font-size:20px"></i> Add Post
+<a class="btn btn-small btn-info create-post " href="/create-post">
+    <i class="fas fa-plus"></i>
 </a>
 
 <script>
