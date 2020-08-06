@@ -6,23 +6,13 @@ html {
 .background-image {
     /* margin: 0;
         padding: 0; */
-    /* background: url("https://images.kienthuc.net.vn/zoom/800/uploaded/nguyenlap/2016_01_18/khi-loai-cho-dang-yeu-cung-lang-man-nhu-nguoi-hinh-2.jpg") no-repeat center center fixed;  */
-    background-size: cover;
+    background: url("../images/Dogs.png") repeat;
+    background-size: 960px 540px;
     position: relative;
     top: 5px;
-    background-size: 100%;
 }
 
-
-/* .navbar-text{
-        text-align: center;
-    } */
-
 .loginBox {
-    position: absolute;
-    top: 45%;
-    left: 25%;
-    transform: translate(-50%, -50%);
     width: 350px;
     height: 350px;
     box-sizing: border-box;
@@ -33,13 +23,6 @@ html {
     background-size: 100%;
     position: relative;
 }
-
-
-/* h4{
-position: left;
-margin-left: 5px;
-
-} */
 
 .container {
     margin-top: 8%;
