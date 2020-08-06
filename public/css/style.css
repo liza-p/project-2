@@ -4,14 +4,17 @@ html {
 }
 
 .background-image {
-    /* margin: 0;
-        padding: 0; */
     background: url("../images/Dogs.png") repeat;
     background-size: 960px 540px;
     position: relative;
-    top: 5px;
-}
 
+}
+.home-background {
+    background: url("../images/main.jpg") repeat;
+    /* background-size: 960px 540px; */
+    position: relative;
+   
+}
 .loginBox {
     width: 350px;
     height: 350px;
